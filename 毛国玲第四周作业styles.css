@@ -1,0 +1,179 @@
+/* 全局样式 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  background-image: url('https://www.svgrepo.com/show/316777/wax-print.svg'); /* 蜡染纹理图案 */
+  background-size: cover;
+  color: #1e3d59;
+}
+
+/* 页面加载进度条 */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background-color: #d4af37;
+  width: 0%;
+  z-index: 999;
+  transition: width 0.3s ease;
+}
+
+/* 导航栏 */
+nav {
+  background-color: #1e3d59;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  background-image: url('miao-embroidery.svg'); /* 苗绣纹样 */
+  background-size: cover;
+}
+
+nav ul li a:hover {
+  background-color: #d4af37;
+}
+
+/* 动态切换的banner图 */
+.banner {
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.slider {
+  display: flex;
+  width: 200%;
+  animation: slide 10s infinite;
+}
+
+.slide {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* 各板块样式 */
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+section h2 {
+  color: #d4af37;
+}
+
+/* 交互式地图 */
+.map {
+  width: 100%;
+  height: 300px;
+  background-color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* 特色美食图片 */
+.attraction-list img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 天气显示 */
+#weather {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 社交媒体分享按钮 */
+.social-share {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-share a {
+  margin: 5px;
+  color: #1e3d59;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-share a:hover {
+  color: #d4af37;
+}
+
+/* 日夜模式 */
+.dark-mode {
+  background-color: #1e3d59;
+  color: white;
+}
+
+.dark-mode nav {
+  background-color: #d4af37;
+}
+
+.dark-mode nav ul li a {
+  color: #1e3d59;
+}
+
+.dark-mode nav ul li a:hover {
+  background-color: white;
+}
+
+.dark-mode #weather {
+  background-color: #1e3d59;
+  color: white;
+}
+
+.dark-mode .social-share a {
+  color: white;
+}
+
+.dark-mode .social-share a:hover {
+  color: #d4af37;
+}

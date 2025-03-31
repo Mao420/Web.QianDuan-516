@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <title>贵州旅游文化展示</title>
+</head>
+<body>
+  <!-- 页面加载进度条 -->
+  <div class="progress-bar"></div>
+
+  <!-- 导航栏 -->
+  <nav>
+    <ul>
+      <li><a href="#geography">地理概况</a></li>
+      <li><a href="#culture">民族文化</a></li>
+      <li><a href="#attractions">旅游景点</a></li>
+      <li><a href="#cuisine">特色美食</a></li>
+      <li><a href="#" id="toggle-mode"><i class="fas fa-moon"></i></a></li>
+    </ul>
+  </nav>
+
+  <!-- 动态切换的banner图 -->
+  <section class="banner">
+    <div class="slider">
+      <div class="slide" style="background-image: url('huangguoshu.jpg');"></div>
+      <div class="slide" style="background-image: url('qianhumiaozhai.jpg');"></div>
+    </div>
+  </section>
+
+  <!-- 地理概况 -->
+  <section id="geography">
+    <h2>地理概况</h2>
+    <p>贵州地处中国西南内陆地区腹地，是中国西南地区交通枢纽，长江经济带重要组成部分。</p>
+  </section>
+
+  <!-- 民族文化 -->
+  <section id="culture">
+    <h2>民族文化</h2>
+    <p>贵州拥有丰富的民族文化，如苗族、侗族等少数民族的独特风情。</p>
+  </section>
+
+  <!-- 旅游景点 -->
+  <section id="attractions">
+    <h2>旅游景点</h2>
+    <div class="map" id="interactive-map">
+      <!-- 交互式地图 -->
+    </div>
+    <div class="attraction-list">
+      <img src="huangguoshu.jpg" alt="黄果树瀑布" loading="lazy">
+      <img src="qianhumiaozhai.jpg" alt="千户苗寨" loading="lazy">
+    </div>
+  </section>
+
+  <!-- 特色美食 -->
+  <section id="cuisine">
+    <h2>特色美食</h2>
+    <p>贵州有许多特色美食，如酸汤鱼、丝娃娃等。</p>
+  </section>
+
+  <!-- 天气显示 -->
+  <div id="weather">
+    <i class="fas fa-cloud"></i> <span id="weather-info">加载中...</span>
+  </div>
+
+  <!-- 社交媒体分享按钮 -->
+  <div class="social-share">
+    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-weibo"></i></a>
+  </div>
+
+  <script>
+    // 页面加载进度条
+    window.addEventListener('load', function() {
+      const progressBar = document.querySelector('.progress-bar');
+      progressBar.style.width = '100%';
+      setTimeout(() => {
+        progressBar.style.display = 'none';
+      }, 500);
+    });
+
+    // 日夜模式切换
+    const toggleMode = document.getElementById('toggle-mode');
+    const body = document.body;
+    toggleMode.addEventListener('click', function() {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        toggleMode.innerHTML = '<i class="fas fa-sun"></i>';
+      } else {
+        toggleMode.innerHTML = '<i class="fas fa-moon"></i>';
+      }
+    });
+
+    // 平滑滚动
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // 视差滚动效果
+    const banner = document.querySelector('.banner');
+    window.addEventListener('scroll', function() {
+      const scrollTop = window.pageYOffset;
+      banner.style.transform = `translateY(${scrollTop * 0.5}px)`;
+    });
+
+    // 天气API调用（示例，需替换为实际API）
+    const weatherInfo = document.getElementById('weather-info');
+    fetch('https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=Guiyang')
+     .then(response => response.json())
+     .then(data => {
+        weatherInfo.textContent = `${data.current.condition.text}, ${data.current.temp_c}°C`;
+      })
+     .catch(error => {
+        weatherInfo.textContent = '获取天气信息失败';
+      });
+  </script>
+</body>
+</html>
