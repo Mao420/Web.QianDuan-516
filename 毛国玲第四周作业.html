@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TFBOYS成员介绍</title>
+  <style>
+    /* 全局样式 */
+    body {
+      font-family: "宋体", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 导航栏样式 */
+    nav {
+      background-color: #FFA500;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      background-color: #FF8C00;
+    }
+
+    /* 轮播图样式 */
+    .slider {
+      margin-top: 50px;
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+
+    .slider img {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+
+    .slider img.active {
+      display: block;
+    }
+
+    /* 成员页标题样式 */
+    h1.wjk {
+      color: #0000FF;
+      font-family: "黑体", sans-serif;
+      font-size: 36px;
+    }
+
+    h1.yyqx {
+      color: #FF0000;
+      font-family: "黑体", sans-serif;
+      font-size: 36px;
+    }
+
+    h1.wy {
+      color: #00FF00;
+      font-family: "黑体", sans-serif;
+      font-size: 36px;
+    }
+
+    /* 正文样式 */
+    p {
+      font-size: 24px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    /* 成员信息模块样式 */
+    .member-info {
+      padding: 20px;
+    }
+
+    .member-info img {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .icon-text {
+      display: flex;
+      align-items: center;
+    }
+
+    .icon-text img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    /* 粉丝数据样式 */
+    .fan-data {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <nav>
+    <ul>
+      <li><a href="wangjunkai1.jpeg">王俊凯</a></li>
+      <li><a href="yiyangqianxi1.jpeg">易烊千玺</a></li>
+      <li><a href="wangyuan1.jpeg">王源</a></li>
+    </ul>
+  </nav>
+
+  <!-- 轮播图 -->
+  <div class="slider">
+    <!-- 假设 wangjunkai2.jpeg 在当前 HTML 文件相同的目录下 -->
+    <img src="wangjunkai2.jpeg" alt="王俊凯" class="active">
+    <!-- 假设 yiyangqianxi1.jpg 在当前 HTML 文件相同的目录下 -->
+    <img src="yiyangqianxi1.jpg" alt="易烊千玺">
+    <!-- 假设 wangyuan1.jpeg 在当前 HTML 文件相同的目录下 -->
+    <img src="wangyuan1.jpeg" alt="王源">
+  </div>
+
+  <!-- 王俊凯页面 -->
+  <div id="wangjunkai" class="member-info">
+    <h1 class="wjk">王俊凯</h1>
+    <!-- 假设 wangjunkai3.jpg 在当前 HTML 文件相同的目录下 -->
+    <img src="wangjunkai3.jpg" alt="王俊凯">
+    <p>姓名：王俊凯</p>
+    <p>年龄：24</p>
+    <p>出生日期：1999年9月21日</p>
+    <h2>代表作品</h2>
+    <ul>
+      <li>《老炮儿》</li>
+      <li>《天坑鹰猎》</li>
+      <li>《解忧杂货店》</li>
+      <li>《749局》</li>
+    </ul>
+    <h2>兴趣爱好</h2>
+    <div class="icon-text">
+      <!-- 假设 wangjunkai1.jpeg 在当前 HTML 文件相同的目录下 -->
+      <img src="wangjunkai1.jpeg" alt="爱好图标">
+      <p>唱歌</p>
+    </div>
+    <div class="icon-text">
+      <img src="hobby_icon.png" alt="爱好图标">
+      <p>打篮球</p>
+    </div>
+    <h2>性格特点</h2>
+    <div class="icon-text">
+      <img src="character_icon.png" alt="性格图标">
+      <p>阳光开朗</p>
+    </div>
+    <div class="icon-text">
+      <img src="character_icon.png" alt="性格图标">
+      <p>有responsibility</p>
+    </div>
+    <div class="fan-data">
+      <p>粉丝数量：动态更新数据</p>
+    </div>
+  </div>
+
+  <!-- 易烊千玺页面 -->
+  <div id="yiyangqianxi" class="member-info">
+    <h1 class="yyqx">易烊千玺</h1>
+    <!-- 假设 yiyangqianxi2.jpg 在当前 HTML 文件相同的目录下 -->
+    <img src="yiyangqianxi2.jpeg" alt="易烊千玺">
+    <p>姓名：易烊千玺</p>
+    <p>年龄：24</p>
+    <p>出生日期：2000年11月28日</p>
+    <h2>代表作品</h2>
+    <ul>
+      <li>《少年的你》</li>
+      <li>《送你一朵小红花》</li>
+      <li>《长安十二时辰》</li>
+      <li>《满江红》</li>
+    </ul>
+    <h2>兴趣爱好</h2>
+    <div class="icon-text">
+      <img src="hobby_icon.png" alt="爱好图标">
+      <p>跳舞</p>
+    </div>
+    <div class="icon-text">
+      <img src="hobby_icon.png" alt="爱好图标">
+      <p>书法</p>
+    </div>
+    <h2>性格特点</h2>
+    <div class="icon-text">
+      <img src="character_icon.png" alt="性格图标">
+      <p>沉稳内敛</p>
+    </div>
+    <div class="icon-text">
+      <img src="character_icon.png" alt="性格图标">
+      <p>努力上进</p>
+    </div>
+    <div class="fan-data">
+      <p>粉丝数量：动态更新数据</p>
+    </div>
+  </div>
+
+  <!-- 王源页面 -->
+  <div id="wangyuan" class="member-info">
+    <h1 class="wy">王源</h1>
+    <!-- 假设 wangyuan2.jpg 在当前 HTML 文件相同的目录下 -->
+    <img src="wangyuan2.jpeg" alt="王源">
+    <p>姓名：王源</p>
+    <p>年龄：24</p>
+    <p>出生日期：2000年11月8日</p>
+    <h2>代表作品</h2>
+    <ul>
+      <li>《地久天长》</li>
+      <li>《大主宰》</li>
+      <li>《环球人物》专栏</li>
+      <li>《客厅狂欢》</li>
+    </ul>
+    <h2>兴趣爱好</h2>
+    <div class="icon-text">
+      <img src="hobby_icon.png" alt="爱好图标">
+      <p>弹吉他</p>
+    </div>
+    <div class="icon-text">
+      <img src="hobby_icon.png" alt="爱好图标">
+      <p>创作音乐</p>
+    </div>
+    <h2>性格特点</h2>
+    <div class="icon-text">
+      <img src="character_icon.png" alt="性格图标">
+      <p>善良纯真</p>
+    </div>
+    <div class="icon-text">
+      <img src="character_icon.png" alt="性格图标">
+      <p>幽默风趣</p>
+    </div>
+    <div class="fan-data">
+      <p>粉丝数量：动态更新数据</p>
+    </div>
+  </div>
+
+  <script>
+    // 轮播图脚本
+    const slides = document.querySelectorAll('.slider img');
+    let currentSlide = 0;
+
+    function showSlide() {
+      slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+      currentSlide = (currentSlide + 1) % slides.length;
+    }
+
+    setInterval(showSlide, 3000);
+  </script>
+</body>
+
+</html>
