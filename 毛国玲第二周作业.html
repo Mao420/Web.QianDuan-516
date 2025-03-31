@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>多彩贵州 - 贵州介绍网站</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f4f4f4, #e0e0e0);
+    }
+
+    nav {
+      background: linear-gradient(to right, #333, #555);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffc107;
+    }
+
+    section {
+      padding: 20px;
+      display: none;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      transition: all 0.3s ease;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      color: #555;
+    }
+
+    .slider {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slider img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      animation: fade 5s infinite;
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0.8;
+      }
+    }
+
+    .quick-entry a {
+      display: inline-block;
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .quick-entry a:hover {
+      background-color: #ffc107;
+    }
+
+    .map-3d,
+    .geographical-location,
+    .climate-features,
+    .administrative-divisions,
+    .karst-kingdom,
+    .world-heritage,
+    .waterfall-vr,
+    .ethnic-distribution,
+    .intangible-heritage,
+    .festival-calendar,
+    .food-map,
+    .tea-wine-culture,
+    .agricultural-products,
+    .real-time-traffic,
+    .ethnic-ar-experience,
+    .customized-route,
+    .digital-twin-experience,
+    .ecological-data-visualization,
+    .rural-revitalization,
+    .front-end-architecture,
+    .back-end-system,
+    .special-features {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    }
+
+    .additional-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .additional-images img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .additional-images img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <nav>
+    <a href="#index">首页</a>
+    <a href="#colorful-guizhou">多彩贵州</a>
+    <a href="#natural-secrets">自然秘境</a>
+    <a href="#ethnic-kaleidoscope">民族万花筒</a>
+    <a href="#flavor-guizhou">风味贵州</a>
+    <a href="#smart-tourism">智慧旅游</a>
+  </nav>
+
+  <!-- 首页 -->
+  <section id="index" class="active">
+    <h2>首页</h2>
+    <!-- 大图轮播 -->
+    <div class="slider">
+      <img src="https://img1.baidu.com/it/u=2654644699,3184863426&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500" alt="黄果树瀑布">
+      <img src="qianhu_miaozhai.jpg" alt="千户苗寨">
+      <img src="fanjingshan_aerial.jpg" alt="梵净山航拍">
+    </div>
+    <!-- 添加更多图片 -->
+    <div class="additional-images">
+      <img src="maotai.jpg" alt="茅台">
+      <img src="duyun_maojian.jpg" alt="都匀毛尖">
+      <img src="sour_fish.jpg" alt="酸汤鱼">
+    </div>
+    <!-- 快速入口图标 -->
+    <div class="quick-entry">
+      <a href="#natural-secrets">自然</a>
+      <a href="#ethnic-kaleidoscope">人文</a>
+      <a href="#flavor-guizhou">美食</a>
+      <a href="#smart-tourism">交通</a>
+    </div>
+    <!-- 3D 省域地图热点交互 -->
+    <div class="map-3d">
+      <p>3D 省域地图热点交互区域</p>
+      <!-- 这里可以添加 3D 地图的占位图片 -->
+      <img src="guizhou_3d_map.jpg" alt="贵州 3D 省域地图" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+  </section>
+
+  <!-- 多彩贵州 -->
+  <section id="colorful-guizhou">
+    <h2>多彩贵州</h2>
+    <!-- 地理区位 -->
+    <div class="geographical-location">
+      <h3>地理区位</h3>
+      <p>贵州地处中国西南内陆地区腹地，是西南地区交通枢纽，长江经济带重要组成部分。其独特的地理位置使其成为连接华南、华中与西南地区的重要节点。</p>
+      <img src="guizhou_geographical_location.jpg" alt="贵州地理区位" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+    <!-- 气候特征 -->
+    <div class="climate-features">
+      <h3>气候特征</h3>
+      <p>贵州属于亚热带湿润季风气候，四季分明、春暖风和、雨量充沛、雨热同期。冬季温暖，夏季凉爽，是天然的避暑胜地。</p>
+      <img src="guizhou_climate.jpg" alt="贵州气候特征" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+    <!-- 行政区划 -->
+    <div class="administrative-divisions">
+      <h3>行政区划</h3>
+      <p>贵州共有 9 个地级行政区划单位，包括 6 个地级市、3 个自治州，每个市州都有其独特的文化和旅游资源。</p>
+      <img src="guizhou_administrative_divisions.jpg" alt="贵州行政区划" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+  </section>
+
+  <!-- 自然秘境 -->
+  <section id="natural-secrets">
+    <h2>自然秘境</h2>
+    <!-- 喀斯特王国 -->
+    <div class="karst-kingdom">
+      <h3>喀斯特王国</h3>
+      <p>贵州是中国喀斯特地貌发育最典型的地区之一，喀斯特地貌占全省总面积的 61.9%。独特的喀斯特地貌造就了贵州壮丽的自然景观，如溶洞、天坑、峰林等。</p>
+      <img src="guizhou_karst.jpg" alt="贵州喀斯特地貌" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+    <!-- 世界遗产名录 -->
+    <div class="world-heritage">
+      <h3>世界遗产名录</h3>
+      <p>贵州拥有多处世界遗产，如荔波喀斯特、施秉云台山等。这些世界遗产不仅是贵州自然美景的代表，也是地球演化历史的重要见证。</p>
+      <img src="guizhou_world_heritage.jpg" alt="贵州世界遗产" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+    <!-- 瀑布群 VR 体验 -->
+    <div class="waterfall-vr">
+      <h3>瀑布群 VR 体验</h3>
+      <p>贵州有众多壮观的瀑布群，如黄果树瀑布、赤水十丈洞瀑布等。通过 VR 体验，游客可以身临其境地感受瀑布的磅礴气势。</p>
+      <img src="guizhou_waterfall.jpg" alt="贵州瀑布群" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+  </section>
+
+  <!-- 民族万花筒 -->
+  <section id="ethnic-kaleidoscope">
+    <h2>民族万花筒</h2>
+    <!-- 少数民族分布图 -->
+    <div class="ethnic-distribution">
+      <h3>少数民族分布图</h3>
+      <p>贵州是一个多民族聚居的省份，有 17 个世居少数民族。各民族在长期的历史发展中，形成了独特的文化和风俗习惯。</p>
+      <img src="guizhou_ethnic_distribution.jpg" alt="贵州少数民族分布" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+    <!-- 非遗传承数据库 -->
+    <div class="intangible-heritage">
+      <h3>非遗传承数据库</h3>
+      <p>贵州拥有丰富的非物质文化遗产，如苗绣、侗歌、水书等。这些非遗项目是贵州民族文化的瑰宝，承载着各民族的历史记忆和智慧。</p>
+      <img src="guizhou_intangible_heritage.jpg" alt="贵州非遗传承" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+    <!-- 节庆日历 -->
+    <div class="festival-calendar">
+      <h3>节庆日历</h3>
+      <p>贵州各民族有许多传统节庆，如苗年、侗族大歌节、水族端节等。这些节庆活动丰富多彩，是体验贵州民族文化的绝佳机会。</p>
+      <img src="guizhou_festival.jpg" alt="贵州民族节庆" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+  </section>
+
+  <!-- 风味贵州 -->
+  <section id="flavor-guizhou">
+    <h2>风味贵州</h2>
+    <!-- 美食地图 -->
+    <div class="food-map">
+      <h3>美食地图</h3>
+      <p>贵州美食以酸、辣为特色，有酸汤鱼、肠旺面、折耳根等众多特色美食。这些美食不仅味道独特，还体现了贵州的地域文化。</p>
+      <img src="guizhou_food.jpg" alt="贵州美食" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+    <!-- 茶酒文化 -->
+    <div class="tea-wine-culture">
+      <h3>茶酒文化</h3>
+      <p>贵州是中国重要的茶酒产地之一，有都匀毛尖、茅台等知名茶酒品牌。茶酒文化在贵州历史悠久，是贵州文化的重要组成部分。</p>
+      <img src="guizhou_tea_wine.jpg" alt="贵州茶酒文化" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+    <!-- 农产品矩阵 -->
+    <div class="agricultural-products">
+      <h3>农产品矩阵</h3>
+      <p>贵州拥有丰富的农产品资源，如老干妈、修文猕猴桃等。这些农产品不仅品质优良，还带动了当地经济的发展。</p>
+      <img src="guizhou_agricultural_products.jpg" alt="贵州农产品" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+  </section>
+
+  <!-- 智慧旅游 -->
+  <section id="smart-tourism">
+    <h2>智慧旅游</h2>
+    <!-- 实时景区客流监测 -->
+    <div class="real-time-traffic">
+      <h3>实时景区客流监测</h3>
+      <p>通过实时景区客流监测系统，游客可以及时了解各景区的客流情况，合理安排行程。</p>
+      <img src="guizhou_real_time_traffic.jpg" alt="贵州实时景区客流监测" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+    <!-- 民族文化 AR 体验 -->
+    <div class="ethnic-ar-experience">
+      <h3>民族文化 AR 体验</h3>
+      <p>利用 AR 技术，游客可以更加生动地体验贵州的民族文化，感受各民族的独特魅力。</p>
+      <img src="guizhou_ethnic_ar.jpg" alt="贵州民族文化 AR 体验" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+    <!-- 定制路线生成器 -->
+    <div class="customized-route">
+      <h3>定制路线生成器</h3>
+      <p>游客可以根据自己的兴趣和时间，使用定制路线生成器规划个性化的旅游路线。</p>
+      <img src="guizhou_customized_route.jpg" alt="贵州定制路线生成器" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+  </section>
+
+  <!-- 核心亮点部分 -->
+  <section id="core-highlights">
+    <h2>核心亮点</h2>
+    <!-- 数字孪生体验 -->
+    <div class="digital-twin-experience">
+      <h3>数字孪生体验</h3>
+      <p>通过数字孪生技术，游客可以 720°云游丹霞地貌、体验苗族银饰制作模拟器、进行天眼 FAST 虚拟观测等。</p>
+      <img src="guizhou_digital_twin.jpg" alt="贵州数字孪生体验" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+    <!-- 生态数据可视化 -->
+    <div class="ecological-data-visualization">
+      <h3>生态数据可视化</h3>
+      <p>通过生态数据可视化系统，游客可以了解贵州的森林覆盖率、长江珠江生态屏障热力图、生物多样性等生态数据。</p>
+      <img src="guizhou_ecological_data.jpg" alt="贵州生态数据可视化" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+    <!-- 振兴村寨纪实 -->
+    <div class="rural-revitalization">
+      <h3>振兴村寨纪实</h3>
+      <p>贵州通过大数据产业带、非遗扶贫工坊等方式，推动振兴村寨纪实，许多特色村寨焕发出新的活力。</p>
+      <img src="guizhou_rural_revitalization.jpg" alt="贵州振兴村寨纪实" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+  </section>
+
+  <!-- 技术实现部分 -->
+  <section id="technical-implementation">
+    <h2>技术实现</h2>
+    <!-- 前端架构 -->
+    <div class="front-end-architecture">
+      <h3>前端架构</h3>
+      <p>本网站采用 Three.js 地理可视化、WebGL 地形渲染、PWA 渐进式应用等前端技术，为用户提供流畅的浏览体验。</p>
+      <img src="guizhou_front_end_architecture.jpg" alt="贵州前端架构" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+    <!-- 后端系统 -->
+    <div class="back-end-system">
+      <h3>后端系统</h3>
+      <p>后端系统采用旅游大数据 API 接口、多语言 CMS 管理系统、智能推荐算法引擎等技术，为网站提供强大的数据支持和功能服务。</p>
+      <img src="guizhou_back_end_system.jpg" alt="贵州后端系统" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+    <!-- 特色功能 -->
+    <div class="special-features">
+      <h3>特色功能</h3>
+      <p>网站还具备方言语音助手、卫星影像对比工具、长征路线数字沙盘等特色功能，为用户提供更加便捷和丰富的旅游体验。</p>
+      <img src="guizhou_special_features.jpg" alt="贵州特色功能" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+    </div>
+  </section>
+
+  <!-- 运营建议部分 -->
+  <section id="operation-suggestions">
+    <h2>运营建议</h2>
+    <ul>
+      <li>国际传播：建立英文/日韩语版本</li>
+      <li>文旅融合：接入一码游贵州平台</li>
+      <li>持续更新：UGC 内容激励机制</li>
+      <li>数据安全：等保三级认证</li>
+    </ul>
+  </section>
+
+  <script>
+    // 简单的导航切换功能
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        sections.forEach(section => {
+          section.classList.remove('active');
+        });
+        const targetSection = document.getElementById(targetId);
+        targetSection.classList.add('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
